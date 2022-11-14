@@ -245,21 +245,18 @@ ul{
     background-color: white;
 }
 .services .container{
-    display: flex;
-    justify-content: center;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
 }
 @media (max-width:991px) {
     .services .container{
         flex-direction: column;
     }
-    
 }
 .services .container .card{
     background-color: #fff;
     text-align: center;
     align-items: center;
-    width: fit-content;
     box-shadow: 0 5px 25px rgb(1 1 1/ 15%);
     padding: 25px;
     color: var(--main-color);
@@ -361,7 +358,6 @@ ul{
     .project .container .box{
         max-width: 100%;
         }
-
 } 
 .project .container .box img{
     max-width: 100%;
@@ -398,11 +394,7 @@ ul{
     grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
     gap: 40px;
 }
-/* @media (max-width:991px) {
-    .contact .container{
-        flex-direction: column;
-    }
-} */
+
 @media (max-width:991px) {
     .contact h2{
         font-size: 1.8em;
