@@ -198,10 +198,13 @@ ul{
 .landing .container h3{
     color: white;
     margin-bottom: 50px;
+    max-width:80%;
+    line-height: 40px;
 }
 @media (max-width:767px) { 
     .landing .container h3{
         text-align: center;
+        width: 100%;
     }
 }
 @media (max-width:767px) {
