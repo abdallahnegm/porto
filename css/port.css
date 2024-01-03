@@ -82,11 +82,6 @@ ul{
     font-size: 40px;
     font-weight: bold;
     color:var(--main-color) ;
-    transition: var(--main-tran);
-    -webkit-transition: var(--main-tran);
-    -moz-transition: var(--main-tran);
-    -ms-transition: var(--main-tran);
-    -o-transition: var(--main-tran);
 }
 @media (max-width:767px) {
     .header .container .logo{
@@ -108,16 +103,65 @@ ul{
     font-size: 18px;
     font-weight: 600;
     padding: 10px 0;
-    transition: var(--main-tran);
+    transition: var(--main-tran); 
     -webkit-transition: var(--main-tran);
     -moz-transition: var(--main-tran);
     -ms-transition: var(--main-tran);
     -o-transition: var(--main-tran);
 }
 .header .container ul li a:hover{
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--main-color-alt);
 }
+/* totop  */
+.btn{
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: var(--main-tran);
+    -webkit-transition: var(--main-tran);
+    -moz-transition: var(--main-tran);
+    -ms-transition: var(--main-tran);
+    -o-transition: var(--main-tran);
+}
+.btn span{
+    position: absolute;
+    left: -120px;
+    display: none;
+    color: var(--main-color);
+    transition: var(--main-tran);
+    -webkit-transition: var(--main-tran);
+    -moz-transition: var(--main-tran);
+    -ms-transition: var(--main-tran);
+    -o-transition: var(--main-tran);
+}
+.hide{
+    display: none;
+}
+.btn:hover{
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+.btn:hover span{
+    display: block;
+}
+/* totop  */
 /*start landing */
 .landing{
     background-image: url(../images/bg.jpg);
@@ -188,12 +232,25 @@ ul{
     font-size: 3.5em;
     font-weight: bold;
     margin-bottom: 50px;
+    width: 100%;
+    animation: display 1.5s ease-in 1s infinite;
+    -webkit-animation: display 1.5s ease-in 1s infinite;
 }
 @media (max-width:767px) {
     .landing .container span {
         text-align: center;
         font-size: 3.2em; 
     }
+}
+@keyframes display {
+    0%
+    {opacity: 0;}
+    50%
+    {opacity: 0.5;}
+    90%
+    {opacity: 1;}
+    100%
+    {opacity: 0;}
 }
 .landing .container h3{
     color: white;
@@ -213,6 +270,13 @@ ul{
         align-items: center;
     }
 }
+.landing a{
+    transition: var(--main-tran);
+    -webkit-transition: var(--main-tran);
+    -moz-transition: var(--main-tran);
+    -ms-transition: var(--main-tran);
+    -o-transition: var(--main-tran);
+}
 .landing .container a.view{
     width: fit-content;
     padding: 20px;
@@ -224,6 +288,11 @@ ul{
     -o-border-radius:10px ;
     color: white;
     font-weight: bold;
+    transition: var(--main-tran);
+    -webkit-transition: var(--main-tran);
+    -moz-transition: var(--main-tran);
+    -ms-transition: var(--main-tran);
+    -o-transition: var(--main-tran);
 }
 .landing .container a.view:hover{
     background-color: var(--main-color-alt);
@@ -316,14 +385,58 @@ ul{
         max-width: 100%;
     }
 }
-
 .project .container{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
     gap: 40px;
     align-items: center;
 }
-
+@keyframes ss {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+    
+}
+.project .switch{
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: space-evenly;
+    /*gap: 20px;
+    */width: 40%;
+    margin: 0 auto 100px;
+    border: 2px solid var(--main-color);
+    padding: 10px 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    font-weight: bold;
+}
+@media (max-width:992px) {
+    .project .switch{
+        width: 100%;
+        flex-direction: column;
+    }
+}
+.switch li{
+    padding: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: var(--main-tran);
+    -webkit-transition: var(--main-tran);
+    -moz-transition: var(--main-tran);
+    -ms-transition: var(--main-tran);
+    -o-transition: var(--main-tran);
+    cursor: pointer ;
+}
+.switch .active, .switch li:hover{
+    background-color: white;
+    color: var(--main-color);
+}
 .project .container .box{
     background-color: white;
     border-radius: 10px;
@@ -334,6 +447,20 @@ ul{
     height:fit-content;
     padding: 15px;
     align-items: center;
+    animation: ss 2s ease-in;
+    -webkit-animation: ss 2s ease-in;
+    transition: var(--main-tran);
+    -webkit-transition: var(--main-tran);
+    -moz-transition: var(--main-tran);
+    -ms-transition: var(--main-tran);
+    -o-transition: var(--main-tran);
+}
+.project .container .box:hover{
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
 }
 .project .container .box .left .dots{
     visibility: hidden;
@@ -373,6 +500,8 @@ ul{
     display: flex;
     justify-content: space-between;
     font-size: 20px;
+    animation: ss 2s ease-in;
+    -webkit-animation: ss 2s ease-in;
 }
 .project .box .name .left{
     font-weight: bold;
