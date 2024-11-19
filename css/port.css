@@ -317,7 +317,7 @@ ul{
     background-color: white;
 }
 .services .container{
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
 }
 @media (max-width:991px) {
@@ -369,6 +369,9 @@ ul{
 .services .container .card p{
     color: black;
     font-size: 18px;
+}
+.owl-theme .owl-nav.disabled + .owl-dots{
+    display: none;
 }
 /* end services  */ 
 /* start projects */ 

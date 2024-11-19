@@ -36,3 +36,23 @@ window.onscroll = function () {
 btn.onclick = function () {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
 }
+var owl = $('.owl-carousel#ser');
+owl.owlCarousel({
+    // items:3,
+    loop:true,
+    // margin:70,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+});
