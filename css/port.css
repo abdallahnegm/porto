@@ -339,6 +339,9 @@ ul{
     -o-transition: var(--main-tran);
     margin-bottom: 40px;
     margin-left: 25px;
+    min-height: 400px;
+    margin: 30px;
+    min-width: 30%;
 
 }
 @media (max-width:767px) {
